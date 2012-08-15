@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+<table>
+  <tr>
+    <td>Name:</td>
+    <td><%= @speaker.name %></td>
+  </tr>
+  <tr>
+    <td>Total votes:</td>
+    <td><%= @votes.count%></td>
+  </tr>
+  <tr>
+    <td>Votes up:</td>
+    <td><%= @votes_up.count%></td>
+  </tr>
+  <tr>
+    <td>Votes down:</td>
+    <td><%= @votes_down.count%></td>
+  </tr>
+</table>
+</p>
+
+<%= link_to 'Edit', edit_speaker_path(@speaker) %> |
+<%= link_to 'Back', speakers_path %>
