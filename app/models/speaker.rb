@@ -5,12 +5,14 @@ class Speaker < ActiveRecord::Base
   def as_json(options = {})
     @votes_down = self.votes.where({:isup => false}).count
     @votes = self.votes.count
+    @updated_at = self.votes.maximum(:created_at)
     @votes_up = @votes - @votes_down
     {
       :id => self.id,
       :name => self.name,
-      :votes => @votes,
-      :votes_up => @votes_up
+      :votes_down => @votes_down,
+      :votes_up => @votes_up,
+      :last_voted => @updated_at
     }
   end
 end
