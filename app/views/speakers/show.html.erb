@@ -25,5 +25,6 @@
 </table>
 </p>
 
+<%= link_to 'Clear', :controller => 'speakers', :action => 'clear', :id => @speaker  %> |
 <%= link_to 'Edit', edit_speaker_path(@speaker) %> |
 <%= link_to 'Back', speakers_path %>

@@ -104,4 +104,9 @@ class SpeakersController < ApplicationController
     @vote.save
     redirect_to speaker_path(params[:id])
   end
+
+  def clear
+    @speaker = Speaker.find(params[:id])
+    @speaker.votes.delete_all()
+  end
 end
