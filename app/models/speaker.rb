@@ -1,5 +1,6 @@
 class Speaker < ActiveRecord::Base
   attr_accessible :name
+  attr_accessible :presentation
   has_many :votes
 
   def as_json(options = {})
