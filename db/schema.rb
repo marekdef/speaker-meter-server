@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120819202241) do
+ActiveRecord::Schema.define(:version => 20120825113641) do
 
   create_table "speakers", :force => true do |t|
     t.text     "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20120819202241) do
     t.integer  "speaker_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "uuid"
   end
 
   add_index "votes", ["speaker_id"], :name => "index_votes_on_speaker_id"

@@ -90,17 +90,21 @@ class SpeakersController < ApplicationController
   end
 
   def voteup
+    set_cookie
     @vote = Vote.new
     @vote.isup = true
     @vote.speaker = Speaker.find(params[:id])
+    @vote.uuid = cookies[:uuid].to_s
     @vote.save
     redirect_to speaker_path(params[:id])
   end
 
   def votedown
+    set_cookie
     @vote = Vote.new
     @vote.isup = false
     @vote.speaker = Speaker.find(params[:id])
+    @vote.uuid = cookies[:uuid].to_s
     @vote.save
     redirect_to speaker_path(params[:id])
   end
@@ -109,5 +113,11 @@ class SpeakersController < ApplicationController
     @speaker = Speaker.find(params[:id])
     @speaker.votes.delete_all()
     redirect_to speaker_path(params[:id])
+  end
+
+  def set_cookie
+    if cookies[:uuid].nil?
+       cookies[:uuid] = UUIDTools::UUID.random_create().to_s
+    end
   end
 end

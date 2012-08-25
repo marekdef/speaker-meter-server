@@ -45,3 +45,7 @@ gem 'jquery-rails'
 gem 'execjs'
 
 gem 'therubyracer'
+
+gem 'uuidtools'
+
+gem 'therubyracer', :platforms => :ruby
