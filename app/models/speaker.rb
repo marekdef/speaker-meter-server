@@ -11,6 +11,7 @@ class Speaker < ActiveRecord::Base
     {
       :id => self.id,
       :name => self.name,
+      :presentation => self.presentation,
       :votes_down => @votes_down,
       :votes_up => @votes_up,
       :last_voted => @updated_at

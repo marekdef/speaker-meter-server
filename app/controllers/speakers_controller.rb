@@ -108,5 +108,6 @@ class SpeakersController < ApplicationController
   def clear
     @speaker = Speaker.find(params[:id])
     @speaker.votes.delete_all()
+    redirect_to speaker_path(params[:id])
   end
 end
