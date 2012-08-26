@@ -1,9 +1,16 @@
 SpeakerMeterServer::Application.routes.draw do
+  get "sessions/new"
+  post "sessions/create"
+
+  resources :users
+
   resources :speakers
   
   match 'speakers/:id/voteup' => "speakers#voteup"
   match 'speakers/:id/votedown' => "speakers#votedown"
   match 'speakers/:id/clear' => "speakers#clear"
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

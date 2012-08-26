@@ -49,3 +49,5 @@ gem 'therubyracer'
 gem 'uuidtools'
 
 gem 'therubyracer', :platforms => :ruby
+
+gem 'bcrypt-ruby'

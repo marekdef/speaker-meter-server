@@ -1,4 +1,5 @@
 class SpeakersController < ApplicationController
+  before_filter :authorize, :only => [ :new, :edit, :destroy, :update ]
   # GET /speakers
   # GET /speakers.json
   def index
@@ -120,4 +121,11 @@ class SpeakersController < ApplicationController
        cookies[:uuid] = UUIDTools::UUID.random_create().to_s
     end
   end
+
+  def authorize
+    if session[:user_id].nil?
+      redirect_to sessions_new_path
+    end
+  end
+
 end
