@@ -1,5 +1,5 @@
 class SpeakersController < ApplicationController
-  before_filter :authorize, :only => [ :new, :edit, :destroy, :update ]
+  before_filter :authorize, :only => [ :new, :edit, :destroy, :update, :clear ]
   # GET /speakers
   # GET /speakers.json
   def index
