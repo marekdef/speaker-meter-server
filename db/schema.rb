@@ -11,13 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120825194153) do
+ActiveRecord::Schema.define(:version => 20120904041744) do
 
   create_table "speakers", :force => true do |t|
     t.text     "name"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
     t.string   "presentation", :default => "", :null => false
+    t.time     "start_time"
+    t.time     "end_time"
+    t.text     "venue"
   end
 
   add_index "speakers", ["name"], :name => "index_speakers_on_name", :unique => true
