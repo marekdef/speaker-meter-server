@@ -1,6 +1,14 @@
 class Speaker < ActiveRecord::Base
+  VENUES = ['F2', 'F3', 'F4', 'F10']
   attr_accessible :name
   attr_accessible :presentation
+  attr_accessible :start_time
+  attr_accessible :end_time
+  attr_accessible :venue
+
+  validates_inclusion_of :venue, :in => VENUES
+  validates_presence_of :start_time, :end_time
+
   has_many :votes
 
   def as_json(options = {})

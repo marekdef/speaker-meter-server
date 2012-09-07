@@ -3,6 +3,8 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Start</th>
+
     <th>Presentation</th>
     <th>Votes up</th>
     <th>Votes down</th>
@@ -14,6 +16,7 @@
 <% @speakers.each do |speaker| %>
   <tr>
     <td><%= speaker.name %></td>
+    <td><%= speaker.start_time %></td>
     <td><%= speaker.presentation %></td>
     <td><%= speaker.votes.where({:isup => true}).count %></td>
     <td><%= speaker.votes.where({:isup => false}).count %></td>
