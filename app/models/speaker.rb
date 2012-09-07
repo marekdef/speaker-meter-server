@@ -14,7 +14,10 @@ class Speaker < ActiveRecord::Base
       :presentation => self.presentation,
       :votes_down => @votes_down,
       :votes_up => @votes_up,
-      :last_voted => @updated_at
+      :last_voted => @updated_at,
+      :venue => self.venue,
+      :start_time => self.start_time,
+      :end_time => self.end_time
     }
   end
 end
