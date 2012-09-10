@@ -32,7 +32,7 @@ class Speaker < ActiveRecord::Base
       :end_time => self.end_time, 
       :venue => self.venue,
       :description => self.description
-    }
+   }
   end
 
   def set_date
