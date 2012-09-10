@@ -5,9 +5,14 @@ class Speaker < ActiveRecord::Base
   attr_accessible :start_time
   attr_accessible :end_time
   attr_accessible :venue
+  attr_accessible :description
 
   validates_inclusion_of :venue, :in => VENUES
   validates_presence_of :start_time, :end_time
+  
+  before_save :set_date
+  before_update :set_date
+  before_create :set_date
 
   has_many :votes
 
@@ -23,9 +28,15 @@ class Speaker < ActiveRecord::Base
       :votes_down => @votes_down,
       :votes_up => @votes_up,
       :last_voted => @updated_at,
-      :start_time => @start_time,
-      :end_time => @end_time, 
-      :venue => @venue
+      :start_time => self.start_time,
+      :end_time => self.end_time, 
+      :venue => self.venue,
+      :description => self.description
     }
+  end
+
+  def set_date
+    self.start_time = self.start_time.change(:year => 2012, :month => 9, :day => 22)
+    self.end_time = self.end_time.change(:year => 2012, :month => 9, :day => 22)
   end
 end
