@@ -11,6 +11,10 @@
     <td><%= @speaker.presentation %></td>
   </tr>
   <tr>
+    <td>Descripton:</td>
+    <td><%= @speaker.description %></td>
+  </tr>
+  <tr>
     <td>Total votes:</td>
     <td><%= @votes.count%></td>
   </tr>
@@ -22,6 +26,9 @@
     <td>Votes down:</td>
     <td><%= @votes_down.count%></td>
   </tr>
+  <tr>
+    <td>Percent:</td>
+    <td><%= number_to_human(100.0 * @votes_up.count / @votes.count) %></td>
 </table>
 </p>
 

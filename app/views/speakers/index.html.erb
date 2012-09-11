@@ -1,13 +1,14 @@
 <h1>Listing speakers</h1>
 
-<table>
+<table border='1'>
   <tr>
     <th>Name</th>
     <th>Start</th>
-
+    <th>End</th>
     <th>Presentation</th>
     <th>Votes up</th>
     <th>Votes down</th>
+    <th>Percent</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,10 +17,17 @@
 <% @speakers.each do |speaker| %>
   <tr>
     <td><%= speaker.name %></td>
-    <td><%= speaker.start_time %></td>
+    <td><%= speaker.start_time.strftime("%H:%M") %></td>
+    <td><%= speaker.start_time.strftime("%H:%M") %></td>
     <td><%= speaker.presentation %></td>
     <td><%= speaker.votes.where({:isup => true}).count %></td>
     <td><%= speaker.votes.where({:isup => false}).count %></td>
+    <td><% if speaker.votes.count > 0%>
+	<%= number_to_human(100.0 * speaker.votes.where({:isup => true}).count / speaker.votes.count) %>
+	<% else %>
+	0
+	<% end %>
+    </td>
     <td><%= link_to 'Show', speaker %></td>
     <td><%= link_to 'Edit', edit_speaker_path(speaker) %></td>
     <td><%= link_to 'Destroy', speaker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
