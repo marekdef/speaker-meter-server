@@ -28,7 +28,13 @@
   </tr>
   <tr>
     <td>Percent:</td>
-    <td><%= number_to_human(100.0 * @votes_up.count / @votes.count) %></td>
+    <td><% if @votes.count > 0%>
+        <%= number_to_human(100.0 * @votes_up / @votes_down) %>
+        <% else %>
+        0
+        <% end %>
+    </td>
+
 </table>
 </p>
 
