@@ -6,6 +6,7 @@ class Speaker < ActiveRecord::Base
   attr_accessible :end_time
   attr_accessible :venue
   attr_accessible :description
+  attr_accessible :visible
 
   validates_inclusion_of :venue, :in => VENUES
   validates_presence_of :start_time, :end_time
