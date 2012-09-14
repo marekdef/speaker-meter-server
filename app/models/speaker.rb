@@ -32,7 +32,8 @@ class Speaker < ActiveRecord::Base
       :start_time => self.start_time,
       :end_time => self.end_time, 
       :venue => self.venue,
-      :description => self.description
+      :description => self.description,
+      :visible => self.visible
    }
   end
 
