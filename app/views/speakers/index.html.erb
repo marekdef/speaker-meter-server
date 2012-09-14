@@ -18,7 +18,7 @@
   <tr>
     <td><%= speaker.name %></td>
     <td><%= speaker.start_time.strftime("%H:%M") %></td>
-    <td><%= speaker.start_time.strftime("%H:%M") %></td>
+    <td><%= speaker.end_time.strftime("%H:%M") %></td>
     <td><%= speaker.presentation %></td>
     <td><%= speaker.votes.where({:isup => true}).count %></td>
     <td><%= speaker.votes.where({:isup => false}).count %></td>
