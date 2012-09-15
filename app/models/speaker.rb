@@ -36,9 +36,4 @@ class Speaker < ActiveRecord::Base
       :visible => self.visible
    }
   end
-
-  def set_date
-    self.start_time = self.start_time.change(:year => 2012, :month => 9, :day => 22)
-    self.end_time = self.end_time.change(:year => 2012, :month => 9, :day => 22)
-  end
 end
