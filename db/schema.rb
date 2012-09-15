@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120914234217) do
+ActiveRecord::Schema.define(:version => 20120915115522) do
 
   create_table "speakers", :force => true do |t|
     t.text     "name"
@@ -21,11 +21,9 @@ ActiveRecord::Schema.define(:version => 20120914234217) do
     t.time     "start_time"
     t.time     "end_time"
     t.text     "venue"
-    t.text     "description",  :limit => 1024
+    t.string   "description",  :limit => 1024
     t.boolean  "visible"
   end
-
-  add_index "speakers", ["name"], :name => "index_speakers_on_name", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "name"

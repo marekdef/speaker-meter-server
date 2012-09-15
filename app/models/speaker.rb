@@ -8,7 +8,7 @@ class Speaker < ActiveRecord::Base
   attr_accessible :description
   attr_accessible :visible
 
-  validates_inclusion_of :venue, :in => VENUES
+  validates_inclusion_of :venue, :in => VENUES, :allow_nil => true, :allow_blank => true
   validates_presence_of :start_time, :end_time
   
   before_save :set_date

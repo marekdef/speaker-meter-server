@@ -38,7 +38,7 @@
 
     <div class="field">
       <%= f.label :venue %><br />
-      <%= f.select :venue, Speaker::VENUES %>
+      <%= f.select :venue, Speaker::VENUES, :include_blank => true %>
     </div>
 
    <div class="field">
