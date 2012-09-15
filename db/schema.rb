@@ -11,18 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120915140623) do
+ActiveRecord::Schema.define(:version => 20120915144509) do
 
   create_table "speakers", :force => true do |t|
     t.text     "name"
     t.datetime "created_at",                                   :null => false
     t.datetime "updated_at",                                   :null => false
     t.string   "presentation",                 :default => "", :null => false
-    t.date     "start_time"
-    t.date     "end_time"
     t.text     "venue"
     t.string   "description",  :limit => 1024
     t.boolean  "visible"
+    t.datetime "start_time"
+    t.datetime "end_time"
   end
 
   create_table "users", :force => true do |t|
