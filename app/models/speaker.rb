@@ -10,10 +10,6 @@ class Speaker < ActiveRecord::Base
 
   validates_inclusion_of :venue, :in => VENUES, :allow_nil => true, :allow_blank => true
   validates_presence_of :start_time, :end_time
-  
-  before_save :set_date
-  before_update :set_date
-  before_create :set_date
 
   has_many :votes
 
