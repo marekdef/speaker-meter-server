@@ -35,17 +35,21 @@ class Speaker < ActiveRecord::Base
   end
 
   def start_time
-	@time_slot = TimeSlot.find_by_id(self.timeslot_id)
+	@time_slot = TimeSlot.find_by_id(self.time_slot_id)
 	if @time_slot
 		return @time_slot.start_time 
 	end
   end
 
   def end_time
-	@time_slot = TimeSlot.find_by_id(self.timeslot_id)
+	@time_slot = TimeSlot.find_by_id(self.time_slot_id)
 	if @time_slot
 		return @time_slot.end_time 
 	end
+  end
+
+  def time_slot
+	TimeSlot.find_by_id(self.time_slot_id)
   end
 
 
