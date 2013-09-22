@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120915144509) do
+ActiveRecord::Schema.define(:version => 20130922154425) do
 
   create_table "speakers", :force => true do |t|
     t.text     "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20120915144509) do
     t.boolean  "visible"
     t.datetime "start_time"
     t.datetime "end_time"
+    t.string   "bio"
   end
 
   create_table "users", :force => true do |t|

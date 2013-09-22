@@ -7,9 +7,11 @@ class Speaker < ActiveRecord::Base
   attr_accessible :venue
   attr_accessible :description
   attr_accessible :visible
+  attr_accessible :bio
 
   validates_inclusion_of :venue, :in => VENUES, :allow_nil => true, :allow_blank => true
   validates_presence_of :start_time, :end_time
+  validates_presence_of :name, :presentation, :description, :bio
 
   has_many :votes
 
@@ -28,6 +30,7 @@ class Speaker < ActiveRecord::Base
       :start_time => self.start_time,
       :end_time => self.end_time, 
       :venue => self.venue,
+      :bio => self.bio,
       :description => self.description,
       :visible => self.visible
    }
