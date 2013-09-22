@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130922154425) do
+ActiveRecord::Schema.define(:version => 20130922214703) do
 
   create_table "speakers", :force => true do |t|
     t.text     "name"
@@ -21,9 +21,15 @@ ActiveRecord::Schema.define(:version => 20130922154425) do
     t.text     "venue"
     t.string   "description",  :limit => 1024
     t.boolean  "visible"
-    t.datetime "start_time"
-    t.datetime "end_time"
     t.string   "bio"
+    t.integer  "time_slot_id"
+  end
+
+  create_table "time_slots", :force => true do |t|
+    t.time     "start_time"
+    t.time     "end_time"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
