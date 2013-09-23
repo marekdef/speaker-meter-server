@@ -1,5 +1,6 @@
 class Speaker < ActiveRecord::Base
   VENUES = ['F2', 'F3', 'F4', 'F10']
+  LANGUAGES = ['English', 'Polish']
   attr_accessible :name
   attr_accessible :presentation
   attr_accessible :venue
@@ -8,8 +9,10 @@ class Speaker < ActiveRecord::Base
   attr_accessible :bio
   attr_accessible :timeslot
   attr_accessible :time_slot_id
+  attr_accessible :language
 
   validates_inclusion_of :venue, :in => VENUES, :allow_nil => true, :allow_blank => true
+  validates_inclusion_of :language, :in => LANGUAGES, :allow_nil => false, :allow_blank => false
   validates_presence_of :name, :presentation, :description, :bio
 
   has_many :votes
