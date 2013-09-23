@@ -49,10 +49,4 @@ class Speaker < ActiveRecord::Base
 		return @time_slot.end_time 
 	end
   end
-
-  def time_slot
-	TimeSlot.find_by_id(self.time_slot_id)
-  end
-
-
 end
