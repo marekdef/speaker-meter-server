@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130922214703) do
+ActiveRecord::Schema.define(:version => 20130923092617) do
 
   create_table "speakers", :force => true do |t|
     t.text     "name"

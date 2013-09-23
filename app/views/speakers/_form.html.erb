@@ -31,7 +31,7 @@
 
     <div class="field">
       <%= f.label :time_slot_id %><br />
-      <%= f.select :time_slot, TimeSlot.all, :include_blank => true %>
+      <%= f.select :timeslot, options_for_select(TimeSlot.all.collect{ |t| [t, t.id] }) , :include_blank => true %>
     </div>
 
 
