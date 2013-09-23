@@ -7,6 +7,7 @@ class Speaker < ActiveRecord::Base
   attr_accessible :visible
   attr_accessible :bio
   attr_accessible :timeslot
+  attr_accessible :time_slot_id
 
   validates_inclusion_of :venue, :in => VENUES, :allow_nil => true, :allow_blank => true
   validates_presence_of :name, :presentation, :description, :bio
