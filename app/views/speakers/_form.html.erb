@@ -42,7 +42,12 @@
 
     <div class="field">
       <%= f.label :venue %><br />
-      <%= f.select :venue_id, options_for_select(Venue.all.collect { |v| [v.name, v.id]}, @speaker.venue.id ), :include_blank => true %>
+      <%
+	if not @speaker.venue.nil?
+		@selected = @speaker.venue.id
+	end
+      %>
+      <%= f.select :venue_id, options_for_select(Venue.all.collect { |v| [v.name, v.id]}, @selected ), :include_blank => true %>
     </div>
 
    <div class="field">
