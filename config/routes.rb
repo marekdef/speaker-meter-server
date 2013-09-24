@@ -11,7 +11,8 @@ SpeakerMeterServer::Application.routes.draw do
   match 'speakers/:id/clear' => "speakers#clear"
   match 'speakers/:id/rate' => "speakers#rate"
 
-
+  #for agenda controller
+  get "agenda" => "agenda#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

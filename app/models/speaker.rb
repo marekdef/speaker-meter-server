@@ -17,7 +17,7 @@ class Speaker < ActiveRecord::Base
 
   has_many :votes
   has_many :ratings
-  belongs_to :timeslot
+  belongs_to :timeslot, :class_name => "TimeSlot", :foreign_key => "time_slot_id"
 
   def as_json(options = {})
     @votes_down = self.votes.where({:isup => false}).count
