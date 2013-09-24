@@ -1,1 +1,27 @@
-<?xml version='1.0' encoding='UTF-8' ?><component name="dataSourceStorage"><data-source source="LOCAL" name="Rails speaker-meter-server: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="e7212ad8-c4fe-4762-a436-76c70e4b5291"><jdbc-driver>org.sqlite.JDBC</jdbc-driver><jdbc-url>jdbc:sqlite:/home/marekdef/projects/speaker-meter-server/db/test.sqlite3</jdbc-url><libraries><library><url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/xerial-sqlite-license.txt</url></library><library><url>jar://$USER_HOME$/.RubyMine40/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar!/</url></library></libraries></data-source><data-source source="LOCAL" name="Rails speaker-meter-server: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="55b7ae65-305a-495e-a829-7a00ad81fea9"><jdbc-driver>org.sqlite.JDBC</jdbc-driver><jdbc-url>jdbc:sqlite:/home/marekdef/projects/speaker-meter-server/db/development.sqlite3</jdbc-url><libraries><library><url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/xerial-sqlite-license.txt</url></library><library><url>jar://$USER_HOME$/.RubyMine40/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar!/</url></library></libraries></data-source></component>
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails speaker-meter-server: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="b08ebce6-9df7-4e66-ba85-a40e2ed8c30d">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/xerial-sqlite-license.txt</url>
+      </library>
+      <library>
+        <url>jar://$USER_HOME$/.RubyMine50/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails speaker-meter-server: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="b4be0bc6-2d26-4cb3-94b4-4e42843c1260">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/xerial-sqlite-license.txt</url>
+      </library>
+      <library>
+        <url>jar://$USER_HOME$/.RubyMine50/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>
