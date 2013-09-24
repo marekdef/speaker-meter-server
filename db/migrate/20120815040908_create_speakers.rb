@@ -1,7 +1,7 @@
 class CreateSpeakers < ActiveRecord::Migration
   def change
     create_table :speakers do |t|
-      t.text :name
+      t.text :name, :limit=>nil
 
       t.timestamps
     end
