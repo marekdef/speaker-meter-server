@@ -1,0 +1,26 @@
+<h1>Agenda</h1>
+
+<table border='1'>
+  <tr>
+    <th>time/venue</th>
+    <% @venues.each { |venue| %>
+      <th><%= venue.venue %></th>
+    <% } %>
+  </tr>
+  <% @agenda.each do |time, speakers| %>
+  <tr>
+    <td>
+      <%= time %>
+      </br>
+      <%= @timesH[time].end_time.strftime("%H:%M") %>
+    </td>
+    <% speakers.each do |speaker| %>
+      <td>
+        <% if speaker.length != 0 %>
+          <%= speaker[0].presentation %>
+        <% end %>
+      </td>
+    <% end %>
+  </tr>
+  <% end %>
+</table>
