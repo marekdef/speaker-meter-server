@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130924184205) do
+ActiveRecord::Schema.define(:version => 20130924201737) do
 
   create_table "ratings", :force => true do |t|
     t.integer  "rating"
@@ -26,13 +26,13 @@ ActiveRecord::Schema.define(:version => 20130924184205) do
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
     t.text     "presentation",   :limit => 255,  :default => "", :null => false
-    t.text     "venue"
     t.string   "description",    :limit => 1024
     t.boolean  "visible"
     t.text     "bio",            :limit => 255
     t.integer  "time_slot_id"
     t.string   "language"
     t.integer  "average_rating"
+    t.integer  "venue_id"
   end
 
   create_table "time_slots", :force => true do |t|
@@ -47,6 +47,12 @@ ActiveRecord::Schema.define(:version => 20130924184205) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "venues", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "votes", :force => true do |t|

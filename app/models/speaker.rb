@@ -1,9 +1,7 @@
 class Speaker < ActiveRecord::Base
-  VENUES = ['F2', 'F3', 'F4', 'F10']
   LANGUAGES = ['English', 'Polish']
   attr_accessible :name
   attr_accessible :presentation
-  attr_accessible :venue
   attr_accessible :description
   attr_accessible :visible
   attr_accessible :bio
@@ -11,11 +9,15 @@ class Speaker < ActiveRecord::Base
   attr_accessible :time_slot_id
   attr_accessible :language
   attr_accessible :average_rating
+  attr_accessible :venue
+  attr_accessible :venue_id
 
-  validates_inclusion_of :venue, :in => VENUES, :allow_nil => true, :allow_blank => true
+  #validates_inclusion_of :venue, :in => VENUES, :allow_nil => true, :allow_blank => true
   validates_inclusion_of :language, :in => LANGUAGES, :allow_nil => false, :allow_blank => false
   validates_presence_of :name, :presentation, :description, :bio
 
+
+  belongs_to :venue
   has_many :votes
   has_many :ratings, :after_add => :update_average_rating, :after_remove => :update_average_rating
 
