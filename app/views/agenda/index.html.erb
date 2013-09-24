@@ -10,14 +10,14 @@
   <% @agenda.each do |time, speakers| %>
   <tr>
     <td>
-      <%= TimeSlot.find(time).start_time %>
+      <%= TimeSlot.find(time).start_time.strftime("%H:%M") %>
       </br>
-      <%= TimeSlot.find(time).end_time %>
+      <%= TimeSlot.find(time).end_time.strftime("%H:%M") %>
     </td>
     <% speakers.each do |speaker| %>
       <td>
-        <% if speaker.length != 0 %>
-          <%= speaker[0].presentation %>
+        <% if speaker != nil %>
+          <%= speaker.presentation %>
         <% end %>
       </td>
     <% end %>

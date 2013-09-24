@@ -12,7 +12,7 @@ class AgendaController < ApplicationController
       @venues.each { |venue|
         @agenda[time.id].push(speakers.select{ |speaker| 
           speaker.venue == venue.venue and speaker.timeslot.start_time == time.start_time
-        })
+        }[0])
       }
     }
 
