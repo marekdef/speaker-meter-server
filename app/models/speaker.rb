@@ -16,7 +16,7 @@ class Speaker < ActiveRecord::Base
   validates_presence_of :name, :presentation, :description, :bio
 
   has_many :votes
-  belongs_to :timeslot
+  belongs_to :timeslot, :class_name => "TimeSlot", :foreign_key => "time_slot_id"
 
   def as_json(options = {})
     @votes_down = self.votes.where({:isup => false}).count
