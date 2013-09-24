@@ -1,8 +1,8 @@
 class ChangeSpekaer < ActiveRecord::Migration
   def up
     change_table :speakers do |t|
-      t.change :bio, :text
-      t.change :presentation, :text
+      t.change :bio, :text, :limit => nil
+      t.change :presentation, :text, :limit => nil
     end	
   end
 
