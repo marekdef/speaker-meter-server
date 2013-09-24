@@ -9,6 +9,7 @@ SpeakerMeterServer::Application.routes.draw do
   match 'speakers/:id/voteup' => "speakers#voteup"
   match 'speakers/:id/votedown' => "speakers#votedown"
   match 'speakers/:id/clear' => "speakers#clear"
+  match 'speakers/:id/rate' => "speakers#rate"
 
 
 

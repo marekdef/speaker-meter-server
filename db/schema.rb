@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130923130926) do
+ActiveRecord::Schema.define(:version => 20130924160459) do
+
+  create_table "ratings", :force => true do |t|
+    t.integer  "rating"
+    t.text     "comment"
+    t.integer  "speaker_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "speakers", :force => true do |t|
     t.text     "name"

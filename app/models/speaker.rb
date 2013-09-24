@@ -16,6 +16,7 @@ class Speaker < ActiveRecord::Base
   validates_presence_of :name, :presentation, :description, :bio
 
   has_many :votes
+  has_many :ratings
   belongs_to :timeslot
 
   def as_json(options = {})

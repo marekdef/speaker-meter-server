@@ -23,6 +23,7 @@ class SpeakersController < ApplicationController
         @votes_down = Vote.where({:isup => false}).find_all_by_speaker_id(params[:id])
         @votes = Vote.find_all_by_speaker_id(params[:id])
         @votes_up = @votes - @votes_down
+	@ratings = @speaker.ratings
         # show.html.erb
       format.json do
         render json: @speaker.to_json()
@@ -128,4 +129,11 @@ class SpeakersController < ApplicationController
     end
   end
 
+  def rate
+	if not params[:rating].nil?
+	  r = Rating.new(params[:rating])
+	  r.save
+	end
+	redirect_to speaker_path
+  end
 end

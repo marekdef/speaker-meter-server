@@ -38,6 +38,21 @@
         0
         <% end %>
     </td>
+  </tr>
+  <tr>
+	<td>Ratings:</td>
+	<td>
+		<table>
+  			<% @ratings.each do |r| %>
+			<tr>
+				<td><%= r.comment %>
+				<td><%= r.rating %>
+			</tr>
+  			<% end %>
+		</table>
+	</td>
+	
+  </tr>
 
 </table>
 </p>
