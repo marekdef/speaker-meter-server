@@ -38,6 +38,7 @@ class Speaker < ActiveRecord::Base
       :venue => self.venue,
       :bio => self.bio,
       :description => self.description,
+      :average_rating => self.average_rating,
       :visible => self.visible
    }
   end
