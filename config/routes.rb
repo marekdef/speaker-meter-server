@@ -5,6 +5,8 @@ SpeakerMeterServer::Application.routes.draw do
   resources :users
 
   resources :speakers
+
+  resources :venues
   
   match 'speakers/:id/voteup' => "speakers#voteup"
   match 'speakers/:id/votedown' => "speakers#votedown"
