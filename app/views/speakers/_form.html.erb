@@ -16,6 +16,10 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio %>
+  </div>
+  <div class="field">
     <%= f.label :presentation %><br />
     <%= f.text_field :presentation %>
   </div>
@@ -25,16 +29,16 @@
     <%= f.text_area :description %>
   </div>
 
-
+  <div class="field">
+    <%= f.label :language %><br />
+    <%= f.select :language, Speaker::LANGUAGES  %>
+  </div>
+ 
     <div class="field">
-      <%= f.label :start_time %><br />
-      <%= f.time_select :start_time %>
+      <%= f.label :time_slot_id %><br />
+      <%= f.select :time_slot_id, options_for_select(TimeSlot.all.collect{ |t| [t, t.id] }, @speaker.time_slot_id) , :include_blank => false %>
     </div>
 
-    <div class="field">
-      <%= f.label :end_time %><br />
-      <%= f.time_select :end_time %>
-    </div>
 
     <div class="field">
       <%= f.label :venue %><br />
