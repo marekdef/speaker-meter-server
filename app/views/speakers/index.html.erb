@@ -13,9 +13,11 @@
     <th></th>
     <th></th>
   </tr>
-
+<% counter=0 %>
 <% @speakers.each do |speaker| %>
+<% counter = counter+1 %>
   <tr>
+    <td><%= counter %>
     <td><%= speaker.name %></td>
     <td><%= speaker.start_time.strftime("%H:%M") %></td>
     <td><%= speaker.end_time.strftime("%H:%M") %></td>
