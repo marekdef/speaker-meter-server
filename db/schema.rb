@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130924160459) do
+ActiveRecord::Schema.define(:version => 20130924170829) do
 
   create_table "ratings", :force => true do |t|
     t.integer  "rating"
@@ -23,22 +23,23 @@ ActiveRecord::Schema.define(:version => 20130924160459) do
 
   create_table "speakers", :force => true do |t|
     t.text     "name"
-    t.datetime "created_at",                                   :null => false
-    t.datetime "updated_at",                                   :null => false
-    t.string   "presentation",                 :default => "", :null => false
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
+    t.string   "presentation",                   :default => "", :null => false
     t.text     "venue"
-    t.string   "description",  :limit => 1024
+    t.string   "description",    :limit => 1024
     t.boolean  "visible"
     t.string   "bio"
     t.integer  "time_slot_id"
     t.string   "language"
+    t.integer  "average_rating"
   end
 
   create_table "time_slots", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
     t.datetime "start_time"
     t.datetime "end_time"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

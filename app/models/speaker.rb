@@ -10,13 +10,15 @@ class Speaker < ActiveRecord::Base
   attr_accessible :timeslot
   attr_accessible :time_slot_id
   attr_accessible :language
+  attr_accessible :average_rating
 
   validates_inclusion_of :venue, :in => VENUES, :allow_nil => true, :allow_blank => true
   validates_inclusion_of :language, :in => LANGUAGES, :allow_nil => false, :allow_blank => false
   validates_presence_of :name, :presentation, :description, :bio
 
   has_many :votes
-  has_many :ratings
+  has_many :ratings, :after_add => :update_average_rating, :after_remove => :update_average_rating
+
   belongs_to :timeslot, :class_name => "TimeSlot", :foreign_key => "time_slot_id"
 
   def as_json(options = {})
@@ -52,5 +54,11 @@ class Speaker < ActiveRecord::Base
 	if @time_slot
 		return @time_slot.end_time 
 	end
+  end
+
+  def update_average_rating(review=nil)
+    s = self.ratings.sum(:rating)
+    c = self.ratings.count
+    self.update_attribute(:average_rating, c == 0 ? 0.0 : s / c.to_f)
   end
 end

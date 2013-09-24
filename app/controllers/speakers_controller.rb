@@ -130,9 +130,11 @@ class SpeakersController < ApplicationController
   end
 
   def rate
-	if not params[:rating].nil?
+	@speaker = Speaker.find(params[:id])
+	if not @speaker.nil?
 	  r = Rating.new(params[:rating])
-	  r.save
+	  @speaker.ratings.push(r)
+	  @speaker.save
 	end
 	redirect_to speaker_path
   end
