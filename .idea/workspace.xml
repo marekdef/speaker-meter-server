@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2ea6420-32cb-4cb0-a565-d602de285f63" name="Default" comment="" />
+    <list default="true" id="b2ea6420-32cb-4cb0-a565-d602de285f63" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="speaker-meter-server.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="b2ea6420-32cb-4cb0-a565-d602de285f63" time="1380044954122" ignored="false" />
@@ -25,10 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="speakers_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="speakers_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/speakers_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="0" selection-start="3208" selection-end="3208" vertical-scroll-proportion="0.5243129">
+            <state line="87" column="0" selection-start="2279" selection-end="2279" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="implicit_render.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.8/lib/action_controller/metal/implicit_render.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.12684989">
               <folding />
             </state>
           </provider>
@@ -37,7 +48,7 @@
       <file leaf-file-name="speaker.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/speaker.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="0" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.0">
+            <state line="61" column="0" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -83,15 +94,6 @@
         <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p125/gems/activerecord-3.2.8/lib/active_record/associations/collection_proxy.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="45" column="0" selection-start="1897" selection-end="1897" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/speakers/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="23" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,8 +149,8 @@
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/speakers/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/speakers/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/speaker.rb" />
         <option value="$PROJECT_DIR$/app/controllers/speakers_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/speaker.rb" />
       </list>
     </option>
   </component>
@@ -685,15 +687,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="17" width="1300" height="991" extended-state="1" />
-    <editor active="true" />
+    <frame x="-10" y="17" width="1300" height="991" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1656" sideWeight="0.6020761" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3979239" sideWeight="0.4712" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3979239" sideWeight="0.4712" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3979239" sideWeight="0.5288" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32641292" sideWeight="0.48" order="2" side_tool="false" content_ui="tabs" />
@@ -779,21 +781,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/models/speaker.rb</url>
-          <line>59</line>
+          <line>60</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/speakers_controller.rb</url>
+          <line>84</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="4" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/speakers/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="23" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
@@ -828,13 +828,6 @@
     <entry file="file://$PROJECT_DIR$/app/models/vote.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="2" selection-start="128" selection-end="159" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="6" selection-start="1710" selection-end="1710" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -874,13 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/speaker.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/rating.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -888,9 +874,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/speaker.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="0" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="6" selection-start="1710" selection-end="1710" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/speakers_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="0" selection-start="3208" selection-end="3208" vertical-scroll-proportion="0.5243129">
+        <state line="87" column="0" selection-start="2279" selection-end="2279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.8/lib/action_controller/metal/implicit_render.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.12684989">
           <folding />
         </state>
       </provider>
