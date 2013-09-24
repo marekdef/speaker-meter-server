@@ -18,7 +18,20 @@ class ChangeDataTypeForTimeSlot < ActiveRecord::Migration
   end
 
   def down
-  	change_column :time_slots, :start_time, :time
-  	change_column :time_slots, :end_time, :time
+  	add_column :time_slots, :start_time_tmp, :time
+  	add_column :time_slots, :end_time_tmp, :time
+  	
+  	TimeSlot.reset_column_information
+  	TimeSlot.all.each do |time_slot|
+	  time_slot.start_time_tmp = Time.parse(time_slot.start_time.to_s)
+	  time_slot.end_time_tmp = Time.parse(time_slot.end_time.to_s)
+	  time_slot.save
+	end
+
+	remove_column :time_slots, :start_time
+	remove_column :time_slots, :end_time
+
+	rename_column :time_slots, :start_time_tmp, :start_time
+	rename_column :time_slots, :end_time_tmp, :end_time
   end
 end

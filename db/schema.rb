@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(:version => 20130923130926) do
   end
 
   create_table "time_slots", :force => true do |t|
-    t.datetime "start_time"
-    t.datetime "end_time"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.datetime "start_time"
+    t.datetime "end_time"
   end
 
   create_table "users", :force => true do |t|
