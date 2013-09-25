@@ -3,7 +3,9 @@ class SpeakersController < ApplicationController
   # GET /speakers
   # GET /speakers.json
   def index
-    @speakers = Speaker.all
+    @speakers = Speaker.where("venue_id <> 0").sort_by { |s| 
+      s.name.split(" ").last
+    }
 
     respond_to do |format|
       format.html # index.html.erb
