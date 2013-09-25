@@ -7,6 +7,7 @@
     <th>Start</th>
     <th>End</th>
     <th>Presentation</th>
+    <th>Venue</th>
     <th>Votes up</th>
     <th>Votes down</th>
     <th>Percent</th>
@@ -23,6 +24,7 @@
     <td><%= speaker.start_time.strftime("%H:%M") %></td>
     <td><%= speaker.end_time.strftime("%H:%M") %></td>
     <td><%= speaker.presentation %></td>
+    <td><%= speaker.venue.name if speaker.venue != nil %></td>
     <td><%= speaker.votes.where({:isup => true}).count %></td>
     <td><%= speaker.votes.where({:isup => false}).count %></td>
     <td><% if speaker.votes.count > 0%>
