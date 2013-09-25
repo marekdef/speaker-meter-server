@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
  */
+
+.main_left_content {
+  width: 600px;
+  min-height: 40px;
+  padding: 4px 16px 4px 16px;
+  font-family: sans serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+}
