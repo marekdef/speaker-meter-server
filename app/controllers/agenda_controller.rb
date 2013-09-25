@@ -2,16 +2,16 @@ class AgendaController < ApplicationController
   # GET /speakers
   # GET /speakers.json
   def index
-    @venues = Speaker.all(:group => 'venue', :select => 'venue')
+    @venues = Venue.order(:name)
     times = TimeSlot.all(:order => 'start_time, end_time')
-    speakers = Speaker.joins(:timeslot).order(:start_time, :end_time, :venue)
+    speakers = Speaker.joins(:timeslot, :venue).order(:start_time, :end_time, "venues.name")
     @agenda = Hash.new()
 
     times.each { |time|
       @agenda[time.id] = Array.new()
       @venues.each { |venue|
         @agenda[time.id].push(speakers.select{ |speaker| 
-          speaker.venue == venue.venue and speaker.timeslot.start_time == time.start_time
+          speaker.venue == venue and speaker.timeslot.start_time == time.start_time
         }[0])
       }
     }

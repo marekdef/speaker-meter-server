@@ -4,7 +4,7 @@
   <tr>
     <th>time/venue</th>
     <% @venues.each { |venue| %>
-      <th><%= venue.venue %></th>
+      <th><%= venue.name %></th>
     <% } %>
   </tr>
   <% @agenda.each do |time, speakers| %>
