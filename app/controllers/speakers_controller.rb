@@ -15,6 +15,21 @@ class SpeakersController < ApplicationController
     end
   end
 
+  # GET /breaks
+  # GET /breaks.json
+  def breaks
+    @speakers = Speaker.where("venue_id = 0")
+
+    respond_to do |format|
+      format.html do
+        render template: "speakers/index"
+      end
+      format.json do
+        render json: @speakers.to_json({:only => ['id', 'name'] })
+      end
+    end
+  end
+
   # GET /speakers/1
   # GET /speakers/1.json
   def show

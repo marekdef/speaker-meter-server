@@ -16,6 +16,8 @@ SpeakerMeterServer::Application.routes.draw do
   #for agenda controller
   get "agenda" => "agenda#index"
 
+  get "breaks" => "speakers#breaks"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
