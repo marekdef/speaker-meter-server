@@ -10,9 +10,16 @@ class AgendaController < ApplicationController
     times.each { |time|
       @agenda[time.id] = Array.new()
       @venues.each { |venue|
-        @agenda[time.id].push(speakers.select{ |speaker| 
+
+        sp = speakers.select{ |speaker| 
           speaker.venue == venue and speaker.timeslot.start_time == time.start_time
-        }[0])
+        }[0]
+
+        if sp.nil? and Speaker.where(:time_slot_id => time.id).length > 0
+          @agenda[time.id].push(Speaker.where(:time_slot_id => time.id)[0])
+        else
+          @agenda[time.id].push(sp)
+        end
       }
     }
 
