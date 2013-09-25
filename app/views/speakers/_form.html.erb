@@ -47,7 +47,7 @@
 		@selected = @speaker.venue.id
 	end
       %>
-      <%= f.select :venue_id, options_for_select(Venue.all.collect { |v| [v.name, v.id]}, @selected ), :include_blank => true %>
+      <%= f.select :venue_id, options_for_select(Venue.all.collect { |v| [v.name, v.id]}.unshift(["przerwa", 0]), @selected ) %>
     </div>
 
    <div class="field">
