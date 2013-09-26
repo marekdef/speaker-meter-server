@@ -37,7 +37,7 @@ class Speaker < ActiveRecord::Base
       :last_voted => @updated_at,
       :start_time => self.start_time,
       :end_time => self.end_time, 
-      :venue => self.venue,
+      :venue => self.venue.nil? ? self.venue : self.venue.name,
       :bio => self.bio,
       :description => self.description,
       :average_rating => self.average_rating,
