@@ -16,7 +16,7 @@ class AgendaController < ApplicationController
         }[0]
 
         if sp.nil? and Speaker.where(:time_slot_id => time.id).length > 0
-          @agenda[time.id].push(Speaker.where(:time_slot_id => time.id)[0])
+          @agenda[time.id].push(nil)
         else
           @agenda[time.id].push(sp)
         end
