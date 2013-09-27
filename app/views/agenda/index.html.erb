@@ -17,7 +17,9 @@
     <% speakers.each do |speaker| %>
       <td>
         <% if speaker != nil %>
-          <%= speaker.presentation %>
+          <% speaker.each do |sp| %>
+            <p><%= sp.presentation %></p>
+          <% end %>
         <% end %>
       </td>
     <% end %>
